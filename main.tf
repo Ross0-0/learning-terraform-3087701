@@ -64,7 +64,7 @@ module "alb" {
       target_group_index = 0
       }
     }
-  }
+  
 
   target_groups = {
     ex-instance = {
@@ -79,6 +79,7 @@ module "alb" {
   tags = {
     Environment = "Development"
   }
+}
 
 
 module "blog_sg" {
