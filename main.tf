@@ -80,7 +80,7 @@ module "blog_alb" {
     Environment = "dev"
   }
 }
-}
+
 
 
 module "blog_sg" {
