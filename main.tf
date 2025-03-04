@@ -55,7 +55,7 @@ module "alb" {
   subnets = module.blog_vpc.public_subnets
 
   # Security Group
-  Security_groups = module.blog_sg.security_group_id
+  Security_groups = [module.blog_sg.security_group_id]
 
   listeners = {
     http_tcp = {
@@ -79,7 +79,7 @@ module "alb" {
   tags = {
     Environment = "Development"
   }
-}
+
 
 module "blog_sg" {
   source  = "terraform-aws-modules/security-group/aws"
